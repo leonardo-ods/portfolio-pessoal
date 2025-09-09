@@ -121,19 +121,20 @@
                     <i class="fab fa-github"></i>
                 </a>
             </div>
-            <!-- O formulário é apenas visual -->
-            <form>
+            <!-- Formulário de contato -->
+            <form action="https://formsubmit.co/leooliv@protonmail.com" method="POST">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
-
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-
                 <label for="mensagem">Mensagem:</label>
                 <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-
+                <input type="hidden" name="_subject" value="Mensagem do meu portfólio">
+                <!-- Proteção contra spam -->
+                <input type="hidden" name="_captcha" value="true">
                 <button type="submit">Enviar</button>
             </form>
+
         </section>
     </main>
 
@@ -145,4 +146,5 @@
     <!-- Link para o arquivo JavaScript -->
     <script src="script.js"></script>
 </body>
+
 </html>
