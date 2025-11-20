@@ -1,44 +1,28 @@
-// Espera o documento HTML ser completamente carregado para executar o código
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
 
-    // Seleciona todos os links de navegação e todas as seções de conteúdo
     const navLinks = document.querySelectorAll('.nav-link');
-    const pages = document.querySelectorAll('.page');
+    const sections = document.querySelectorAll('section[id]');
 
-    // Função para mostrar a página correta e esconder as outras
-    function showPage(pageId) {
-        pages.forEach(page => {
-            if (page.id === pageId) {
-                page.classList.add('active');
-            } else {
-                page.classList.remove('active');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    
+                    if (link.getAttribute('href') === '#' + id) {
+                        link.classList.add('active');
+                    }
+                });
             }
         });
-
-        // Itera sobre todos os links de navegação para atualizar o estilo do link ativo
-        navLinks.forEach(link => {
-            if (link.dataset.page === pageId) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        });
-    }
-
-    // Adiciona um evento de clique para cada link da navegação
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            // Previne o recarregamento da página:
-            event.preventDefault();
-
-            // Pega o valor do atributo 'data-page' do link que foi clicado
-            const targetPageId = this.dataset.page;
-
-            // Chama a função para mostrar a página correspondente
-            showPage(targetPageId);
-        });
+    }, {
+        threshold: 0.3,
+        rootMargin: "-10% 0px -50% 0px"
     });
 
-    // Garante que a página 'sobre' seja exibida ao carregar o site pela primeira vez
-    showPage('sobre');
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 });
