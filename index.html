@@ -3,165 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leonardo Oliveira</title>
+    <title>Leonardo Oliveira | Data Science & IA</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon.png" type="image/png">
-    <!-- Biblioteca para pegar alguns ícones: -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-    <!-- Cabeçalho com menu de navegação -->
+    <!-- Cabeçalho -->
     <header>
         <div class="header-container">
-            <h1>Leonardo Oliveira</h1>
+            <div class="logo">Leonardo<span>.Oliveira</span></div>
             <nav>
                 <ul>
-                    <li><a href="#" class="nav-link active" data-page="sobre">Sobre mim</a></li>
-                    <li><a href="#" class="nav-link" data-page="formacao">Formação</a></li>
-                    <li><a href="#" class="nav-link" data-page="portfolio">Portfólio</a></li>
-                    <li><a href="#" class="nav-link" data-page="contato">Contato</a></li>
+                    <li><a href="#sobre" class="nav-link active">Sobre</a></li>
+                    <li><a href="#formacao" class="nav-link">Formação</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                    <li><a href="#contato" class="nav-link btn-destaque">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Conteúdo principal que será trocado dinamicamente -->
     <main>
-        <!-- Sobre Mim -->
-        <section id="sobre" class="page active">
-            <h2>Sobre Mim</h2>
-            <div class="sobre-container">
-
-                <!-- Div para a imagem -->
-                <div class="sobre-imagem">
-                    <img src="images/Leonardo.jpeg" alt="Foto de Perfil de Leonardo Oliveira">
-                </div>
-
-                <!-- Div para o texto -->
+        <!-- Seção Sobre Mim -->
+        <section id="sobre" class="section">
+            <div class="container sobre-container">
                 <div class="sobre-texto">
-                    <p>Olá! Sou Leonardo Oliveira, estudante de <strong>Ciência de Dados</strong>. Gosto de explorar as novidades no mundo da <strong>Inteligência Artificial</strong>, e fora do código, sou um estrategista no tabuleiro de xadrez e um explorador de narrativas em mangás e animes, hobbies que afiam meu pensamento analítico e criativo.</p>
-                    <p>Iniciei minha trajetória profissional como Auxiliar Administrativo, adquirindo sólida experiência em <strong>gestão financeira</strong>, <strong>liderança</strong>, <strong>processos administrativos</strong> e uso de ferramentas como <strong>Excel</strong>, <strong>SQL</strong> e <strong>Python</strong>. Atualmente, estou cursando Ciência de Dados, área que conecta minha curiosidade e <em>paixão por resolver problemas</em> com a busca por <span class="highlight">soluções baseadas em dados</span>.</p>
+                    <span class="badge">Ciência de Dados & IA</span>
+                    <h2>Olá, eu sou <br><span>Leonardo Oliveira</span></h2>
+                    <p>
+                        Transformo dados em estratégia. Sou baiano, estudante de <strong>Ciência de Dados</strong> e apaixonado por desvendar o potencial da <strong>Inteligência Artificial</strong>. Fora do código, sou um estrategista no tabuleiro de xadrez e um explorador de narrativas em mangás e animes, hobbies que afiam meu pensamento analítico e criativo.
+                    </p>
+                    <p>
+                        Minha jornada une a experiência em gestão administrativa com a paixão técnica por <strong>IA</strong>, <strong>Python</strong>, <strong>SQL</strong> e soluções baseadas em dados.
+                    </p>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/leonardo-ods/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/leonardo-ods" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/leooliv.5/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <a href="#portfolio" class="btn-primary">Ver Meus Projetos <i class="fas fa-arrow-down"></i></a>
+                </div>
+                
+                <div class="sobre-imagem">
+                    <div class="img-box">
+                        <img src="images/Leonardo.jpeg" alt="Foto de Leonardo Oliveira">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Formação -->
-        <section id="formacao" class="page">
-            <h2>Formação e Competências</h2>
+        <!-- Formação e Skills -->
+        <section id="formacao" class="section bg-alt">
+            <div class="container">
+                <h2 class="section-title">Formação e Habilidades</h2>
+                
+                <div class="grid-2-col">
+                    <!-- Card Formação -->
+                    <div class="card info-card">
+                        <h3><i class="fas fa-graduation-cap"></i> Acadêmico</h3>
+                        <div class="card-content">
+                            <h4>Tecnologia em Ciência de Dados</h4>
+                            <span class="subtitle">UNINTER | Cursando</span>
+                            <p>Foco em análise estatística, machine learning e visualização de dados para extração de insights estratégicos.</p>
+                        </div>
+                    </div>
 
-            <!-- Formação Acadêmica -->
-            <div class="info-block">
-                <h3><i class="fas fa-graduation-cap"></i> Formação Acadêmica</h3>
-                <ul class="education-list">
-                    <li>
-                        <strong>Tecnologia em Ciência de Dados</strong>
-                        <p class="card-subtitle">Centro Universitário Internacional UNINTER | Cursando</p>
-                        <p class="card-text">Focado em análise estatística, machine learning e visualização de dados para extrair insights valiosos e suportar decisões de negócio.</p>
-                    </li>
-                </ul>
-            </div>
+                    <!-- Card Idiomas -->
+                    <div class="card info-card">
+                        <h3><i class="fas fa-globe"></i> Idiomas</h3>
+                        <ul class="language-list">
+                            <li><span>Português</span> <span class="level">Nativo</span></li>
+                            <li><span>Inglês</span> <span class="level">Intermediário</span></li>
+                        </ul>
+                    </div>
+                </div>
 
-            <!-- Competências Técnicas -->
-            <div class="info-block">
-                <h3><i class="fas fa-code"></i> Competências Técnicas</h3>
-                <ul class="skills-list-columns">
-                    <li>SQL</li>
-                    <li>Python</li>
-                    <li>Inteligência Artificial</li>
-                    <li>Machine Learning</li>
-                    <li>Power BI</li>
-                    <li>Excel</li>
-                </ul>
-            </div>
-
-            <!-- Idiomas -->
-            <div class="info-block">
-                <h3><i class="fas fa-language"></i> Idiomas</h3>
-                <ul class="language-list">
-                    <li><strong>Português:</strong> Nativo</li>
-                    <li><strong>Inglês:</strong> Intermediário</li>
-                </ul>
+                <!-- Competências -->
+                <div class="skills-container">
+                    <h3><i class="fas fa-code"></i> Competências Técnicas</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+                        <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
+                        <div class="skill-item"><i class="fas fa-robot"></i> IA Generativa</div>
+                        <div class="skill-item"><i class="fas fa-brain"></i> Machine Learning</div>
+                        <div class="skill-item"><i class="fas fa-chart-bar"></i> Power BI</div>
+                        <div class="skill-item"><i class="fas fa-file-excel"></i> Excel</div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Portfólio -->
-        <section id="portfolio" class="page">
-            <h2>Meus Projetos</h2>
-            <div class="portfolio-item">
-                    <h3>IncluIA - Protótipo </h3>
-                    <p>Uma ferramenta educacional para adaptar avaliações para estudantes com NEEs, utilizando IA generativa. Basta inserir uma avaliação ou questão de prova, indicar para qual NEE será direcionada (TDAH, TEA, Deficiência Intelectual, etc) e a plataforma devolve a avaliação adaptada, com indicadores da complexidade linguística antes e depois da adaptação. Para acessar, é necessário criar uma conta e inserir uma chave API do Google Gemini.</p>
-                    <a href="https://incluia.streamlit.app/" target="_blank">Ver projeto</a>
-                    <span> | </span>
-                    <a href="https://github.com/leonardo-ods/IncluIA" target="_blank">Github</a>
+        <section id="portfolio" class="section">
+            <div class="container">
+                <h2 class="section-title">Projetos Recentes</h2>
+                
+                <!-- Destaque Principal -->
+                <div class="card portfolio-destaque">
+                    <div class="destaque-content">
+                        <span class="badge-project">Destaque</span>
+                        <h3>IncluIA - Educação Inclusiva</h3>
+                        <p>Ferramenta educacional (protótipo) que utiliza IA Generativa para adaptar avaliações para estudantes com Necessidades Educativas Especiais (NEEs). Analisa e reduz a complexidade linguística mantendo o conteúdo.</p>
+                        <div class="tags">
+                            <span>Python</span><span>GenAI</span><span>Streamlit</span>
+                        </div>
+                        <div class="links">
+                            <a href="https://incluia.streamlit.app/" target="_blank" class="btn-sm">Usar o Protótipo</a>
+                            <a href="https://github.com/leonardo-ods/IncluIA" target="_blank" class="btn-text">Github <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
                 </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <h3>Classificação de Tumores com Machine Learning</h3>
-                    <p>Modelos de Machine Learning (Random Forest e SVM) para classificação de tumores (maligno/benigno) utilizando o Wisconsin Breast Cancer Dataset.</p>
-                    <a href="https://github.com/leonardo-ods/tumor_classification_ml/blob/main/Classifica%C3%A7%C3%A3o_de_Tumores_com_Machine_Learning.ipynb" target="_blank">Github</a>
-                    <span> | </span>
-                    <a href="https://colab.research.google.com/drive/1G58d8Je1_QEaQ7tcmwYzhyR7BiF5EsHH?usp=sharing" target="_blank">Colab</a>
-                </div>
-                <div class="portfolio-item">
-                    <h3>Consulta Situação Cadastral de CNPJ</h3>
-                    <p>Ferramenta simples em Python para consulta de situação cadastral de CNPJs via API pública, com interface gráfica em Tkinter.</p>
-                    <a href="https://github.com/leonardo-ods/consulta-cadastral-CNPJ" target="_blank">Github</a>
-                </div>
-                <div class="portfolio-item">
-                    <h3>Jogo do Número Secreto</h3>
-                    <p>Um jogo simples onde o objetivo é adivinhar um número secreto escolhido aleatoriamente entre 1 e 100. O usuário insere seus palpites em um campo de entrada e o jogo informa quantas tentativas foram necessárias para acertar o número secreto.</p>
-                    <a href="https://jogo-numero-secreto-roan-eight.vercel.app/" target="_blank">Ver projeto</a>
-                    <span> | </span>
-                    <a href="https://github.com/leonardo-ods/jogo-do-numero-secreto" target="_blank">Github</a>
+
+                <!-- Grid de Outros Projetos -->
+                <div class="portfolio-grid">
+                    <div class="card portfolio-item">
+                        <h3>Classificação de Tumores com ML</h3>
+                        <p>Classificação de tumores (maligno/benigno) usando modelos de Machine Learning (Random Forest e SVM) com o Wisconsin Breast Cancer Dataset.</p>
+                        <div class="tags">
+                            <span>Python</span><span>Machine Learning</span>
+                        </div>
+                        <div class="links-bottom">
+                            <a href="https://github.com/leonardo-ods/tumor_classification_ml/blob/main/Classifica%C3%A7%C3%A3o_de_Tumores_com_Machine_Learning.ipynb" target="_blank">GitHub</a>
+                            <a href="https://colab.research.google.com/drive/1G58d8Je1_QEaQ7tcmwYzhyR7BiF5EsHH?usp=sharing" target="_blank">Colab</a>
+                        </div>
+                    </div>
+
+                    <div class="card portfolio-item">
+                        <h3>Consulta Cadastral CNPJ</h3>
+                        <p>Ferramenta simples em Python com interface gráfica (Tkinter) para consulta de situação cadastral via API pública.</p>
+                        <div class="tags">
+                            <span>Python</span><span>APIs</span>
+                        </div>
+                        <div class="links-bottom">
+                            <a href="https://github.com/leonardo-ods/consulta-cadastral-CNPJ" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="card portfolio-item">
+                        <h3>Jogo do Número Secreto</h3>
+                        <p>Jogo interativo de lógica para adivinhar números aleatórios, focado em lógica de programação.</p>
+                        <div class="tags">
+                            <span>Javascript</span><span>Game</span>
+                        </div>
+                        <div class="links-bottom">
+                            <a href="https://jogo-numero-secreto-roan-eight.vercel.app/" target="_blank">Jogar</a>
+                            <a href="https://github.com/leonardo-ods/jogo-do-numero-secreto" target="_blank">GitHub</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Contato -->
-        <section id="contato" class="page">
-            <h2>Entre em Contato</h2>
-            <p>Sinta-se à vontade para me enviar uma mensagem!</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/leonardo-ods/" target="_blank" title="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://www.instagram.com/leooliv.5/" target="_blank" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://github.com/leonardo-ods" target="_blank" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
+        <section id="contato" class="section bg-alt">
+            <div class="container contato-wrapper">
+                <h2 class="section-title">Vamos Conversar?</h2>
+                <p class="contato-desc">Estou disponível para oportunidades em Ciência de Dados e IA.</p>
+                
+                <form action="https://formsubmit.co/leooliv@protonmail.com" method="POST" class="form-contato">
+                    <div class="input-group">
+                        <input type="text" id="nome" name="nome" required placeholder=" ">
+                        <label for="nome">Seu Nome</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">Seu E-mail</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="mensagem" name="mensagem" rows="4" required placeholder=" "></textarea>
+                        <label for="mensagem">Sua Mensagem</label>
+                    </div>
+                    
+                    <input type="hidden" name="_subject" value="Contato do Portfólio">
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <button type="submit" class="btn-primary full-width">Enviar Mensagem <i class="fas fa-paper-plane"></i></button>
+                </form>
             </div>
-            <!-- Formulário de contato -->
-            <form action="https://formsubmit.co/leooliv@protonmail.com" method="POST">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-                <input type="hidden" name="_subject" value="Mensagem do meu portfólio">
-                <!-- Proteção contra spam -->
-                <input type="hidden" name="_captcha" value="true">
-                <button type="submit">Enviar</button>
-            </form>
-
         </section>
     </main>
 
-    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2025 - Desenvolvido por Leonardo Oliveira.</p>
+        <p>&copy; 2025 Leonardo Oliveira. Desenvolvido com <i class="fas fa-code"></i> e Café.</p>
     </footer>
 
-    <!-- Link para o arquivo JavaScript -->
     <script src="script.js"></script>
 </body>
-
 </html>
-
-
-
-
-
